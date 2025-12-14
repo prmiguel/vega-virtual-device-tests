@@ -1,12 +1,13 @@
-package com.amazon.vega;
+package com.amazon.vega.keplervideoapp;
 
+import com.amazon.vega.BaseTest;
 import com.amazon.vega.commands.jsonrpc.domain.enums.InputKeyEvent;
 import org.testng.annotations.Test;
 
-public class VegaAppTest extends BaseTest {
+public class PlayFirstContentTest extends BaseTest {
 
     @Test
-    public void sampleTest() throws InterruptedException {
+    public void playFirstContent() throws InterruptedException {
         Thread.sleep(10000);
         driver.pressKey(InputKeyEvent.DOWN);
         driver.pressKey(InputKeyEvent.ENTER);
