@@ -7,13 +7,12 @@ import org.testng.annotations.Test;
 public class PlayFirstContentTest extends BaseTest {
 
     @Test
-    public void playFirstContent() throws InterruptedException {
-        Thread.sleep(10000);
+    public void playFirstContent() {
         driver.pressKey(InputKeyEvent.DOWN);
         driver.pressKey(InputKeyEvent.ENTER);
-        Thread.sleep(6000);
+        waitFor(6);
         driver.pressKey(InputKeyEvent.ENTER);
-        Thread.sleep(20000);
+        waitFor(20);
         System.out.println(driver.getPageSource());
     }
 }

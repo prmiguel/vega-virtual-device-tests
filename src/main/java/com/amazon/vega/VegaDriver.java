@@ -14,6 +14,7 @@ import com.amazon.vega.commands.vlcm.domain.AppDetails;
 import com.amazon.vega.commands.vpm.InstallApp;
 import com.amazon.vega.exceptions.VegaAppNotInstalledException;
 import com.amazon.vega.utils.FileUtils;
+import com.amazon.vega.utils.PrettyPrintXml;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -52,7 +53,7 @@ public class VegaDriver extends RemoteWebDriver {
 
     @Override
     public String getPageSource() {
-        return command.using(GetSourcePage.class).execute();
+        return PrettyPrintXml.byDom4j(command.using(GetSourcePage.class).execute());
     }
 
     @Override
